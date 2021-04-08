@@ -1,0 +1,65 @@
+{
+  "name": "zh-store",
+  "author": {
+    "email": "zakariaharrane2@gmail.com",
+    "name": "Zakaria harrane"
+  },
+  "proxy": "http://localhost:8080/",
+  "description": "Stock management System By Zharrane",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/electron.js",
+  "build": {
+    "appId": "com.zharrane.store"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^4.6.0",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^2.0.0",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.2.3",
+    "wait-on": "^5.3.0",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently  \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.1",
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5"
+  }
+}

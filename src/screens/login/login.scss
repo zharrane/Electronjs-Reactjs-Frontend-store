@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'), url(../../fonts/Rubik-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik-ExtraBold';
+  src: local('Rubik'), url(../../fonts/Rubik-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik-Light';
+  src: local('Rubik'), url(../../fonts/Rubik-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik-Medium';
+  src: local('Rubik'), url(../../fonts/Rubik-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: local('Rubik'), url(../../fonts/Rubik-SemiBold.ttf) format('truetype');
+}
+
+@keyframes blow {
+  0% {
+    box-shadow: 0 0 0px 0px #5a8b97;
+  }
+  100% {
+    box-shadow: 0 0 40px 1px #5a8b97;
+  }
+}
+.LoginBody {
+  background-color: #5a8b97;
+  background-blend-mode: overlay;
+  background-image: url('../../img/bg.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  main {
+    padding: 0;
+    display: flex;
+    width: 650px;
+    height: 500px;
+    background: #fefefedf;
+    border-radius: 1rem;
+    //box-shadow: 0 0 5px 2px #215f6e;
+  }
+}
+
+img {
+  transform: scale(1);
+  transition: 1s;
+  width: 65%;
+  &:hover {
+    transform: scale(1.2);
+    transition: 2s;
+  }
+}
+main > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+form {
+  width: 80%;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+form h2 {
+  font-family: Rubik-ExtraBold, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #215f6e;
+}
+form .ForgotInfo {
+  text-align: center;
+  font-family: Rubik-Light, sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+}
+form .LoginInput {
+  position: relative;
+  box-shadow: 0 0 5px 1px #55555555 inset;
+  padding: 5px 15px;
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+
+  &:focus-within {
+    animation: blow 0.5s ease-in-out;
+    & .icons {
+      transform: translate(-5px);
+      transition: 0.3s ease-in-out;
+      color: #5a8b97;
+    }
+  }
+}
+form .icons {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #666666;
+}
+form input {
+  background-color: transparent;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  font-weight: 400;
+  width: 100%;
+  padding-left: 25px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+form .LoginSubmit {
+  padding: 5px 15px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #5a8b97;
+  color: #ebebeb;
+  box-shadow: none;
+  &:hover {
+    box-shadow: 0 0 2px 0px #215f6e;
+  }
+}
