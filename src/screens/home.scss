@@ -58,3 +58,40 @@ h2 {
   padding: 15px 50px;
   align-items: center;
 }
+
+////////Spinner
+#loader {
+  font-weight: bold;
+}
+#loader span {
+  display: inline-block;
+  background: #000;
+  width: 5px;
+  height: 50px;
+  border-radius: 5px;
+  animation: load 2s ease infinite;
+}
+
+#loader span:nth-child(2) {
+  animation-delay: 100ms;
+}
+#loader span:nth-child(3) {
+  animation-delay: 200ms;
+}
+#loader span:nth-child(4) {
+  animation-delay: 300ms;
+}
+#loader span:nth-child(5) {
+  animation-delay: 400ms;
+}
+#loader span:nth-child(6) {
+  animation-delay: 500ms;
+}
+
+@keyframes load {
+  50% {
+    height: 10px;
+    margin-top: 40px;
+    opacity: 0.1;
+  }
+}
