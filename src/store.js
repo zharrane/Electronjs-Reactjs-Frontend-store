@@ -1,6 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+
+//Reducer of User
+import { userLoginReducer } from './reducers/userReducers';
+
 //Reducer of products
 import {
   productListReducer,
@@ -11,9 +15,17 @@ import {
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
+  userLogin: userLoginReducer,
 });
 
-const initialState = {};
+const userInfosFromStorage = localStorage.getItem('userInfo')
+  ? JSON.parse(localStorage.getItem('userInfo'))
+  : null;
+
+///////////////
+const initialState = {
+  userLogin: { userInfo: userInfosFromStorage },
+};
 
 const mw = [thunk];
 
