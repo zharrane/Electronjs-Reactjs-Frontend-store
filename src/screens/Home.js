@@ -12,6 +12,7 @@ const Home = () => {
   //
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
+  console.log(products);
   //
   useEffect(() => {
     dispatch(listProductsAction());
@@ -27,9 +28,8 @@ const Home = () => {
         start_date: products[i].createdAt,
         end_date: products[i].updatedAt,
         quantity: products[i].countInStock,
-        orders: products[i].countItemSold,
+        order: products[i].countItemSold,
       };
-      console.log(product);
       whatIWantToSend.push(product);
     }
   }

@@ -1,0 +1,16 @@
+.Form-button-input {
+  display: flex;
+  width: 100%;
+  Form.Control {
+    display: flex;
+    width: 100%;
+    right: 0;
+  }
+  Button {
+    display: flex;
+    left: 0;
+    width: 100%;
+
+    justify-content: center;
+  }
+}

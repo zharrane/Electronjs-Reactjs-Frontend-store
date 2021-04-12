@@ -4,7 +4,7 @@
     "email": "zakariaharrane2@gmail.com",
     "name": "Zakaria harrane"
   },
-  "proxy": "http://localhost:8080/",
+  "proxy": "http://localhost:8070/",
   "description": "Stock management System By Zharrane",
   "version": "0.1.0",
   "private": true,

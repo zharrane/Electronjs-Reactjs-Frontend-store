@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { FaBars, FaBackward } from 'react-icons/fa';
 import { SideBarData } from './Sidebardata';
 import SubMenu from './SubMenu';
@@ -49,6 +49,7 @@ const Sidebar = () => {
           <main className="MainPage">
             <Route path="/" component={Home} exact />
             <Route path="/manageproducts" component={AddProducts} />
+            <Route path="/search/:keyword" component={AddProducts} />
             <Route path="/sellproducts" component={SellProducts} />
             <Route path="/users" component={Users} />
             <Route path="/advanced" component={Advanced} />
