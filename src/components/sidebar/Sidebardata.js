@@ -12,7 +12,7 @@ import { BiSupport } from 'react-icons/bi';
 export const SideBarData = [
   {
     title: 'Dashboard',
-    path: '/',
+    path: '/dashboard',
     icon: <AiOutlineDashboard />,
   },
   {
@@ -51,7 +51,7 @@ export const SideBarData = [
   },
   {
     title: 'Logout',
-    path: '/login',
+    path: '/',
     icon: <AiOutlineLogout />,
   },
 ];

@@ -18,6 +18,7 @@ const reducer = combineReducers({
   userLogin: userLoginReducer,
 });
 
+///Get user info from storage
 const userInfosFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null;

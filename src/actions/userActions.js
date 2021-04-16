@@ -4,7 +4,7 @@ import {
   USER_LOGIN_SUCCESS,
 } from '../constants/useConstants';
 import axios from 'axios';
-export const Login = (username, password) => async (dispatch) => {
+export const LoginAction = (username, password) => async (dispatch) => {
   try {
     dispatch({
       type: USER_LOGIN_REQUEST,

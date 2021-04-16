@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './homecard.scss';
 import { FaShoppingBasket, FaBuffer } from 'react-icons/fa';
 const HomeCard = ({ data }) => {

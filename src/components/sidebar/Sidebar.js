@@ -13,6 +13,7 @@ import Users from '../../screens/Users';
 import SellProducts from '../../screens/SellProducts';
 import Advanced from '../../screens/Advanced';
 import Support from '../../screens/Support';
+import Logout from '../../screens/Logout';
 
 //////////////////////////////////
 /////////////////////////////////
@@ -47,13 +48,14 @@ const Sidebar = () => {
           </SideBarNav>
 
           <main className="MainPage">
-            <Route path="/" component={Home} exact />
+            <Route path="/dashboard" component={Home} />
             <Route path="/manageproducts" component={AddProducts} />
             <Route path="/search/:keyword" component={AddProducts} />
             <Route path="/sellproducts" component={SellProducts} />
             <Route path="/users" component={Users} />
             <Route path="/advanced" component={Advanced} />
             <Route path="/support" component={Support} />
+            <Route path="/" component={Logout} exact />
           </main>
         </div>
       </MainDiv>
