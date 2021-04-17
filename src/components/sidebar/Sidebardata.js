@@ -49,9 +49,9 @@ export const SideBarData = [
     path: '/support',
     icon: <BiSupport />,
   },
-  {
-    title: 'Logout',
-    path: '/',
-    icon: <AiOutlineLogout />,
-  },
+  // {
+  //   title: 'Logout',
+  //   path: '/logout',
+  //   icon: <AiOutlineLogout />,
+  // },
 ];

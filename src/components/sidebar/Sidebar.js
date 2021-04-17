@@ -18,7 +18,7 @@ import Logout from '../../screens/Logout';
 //////////////////////////////////
 /////////////////////////////////
 
-const Sidebar = () => {
+const Sidebar = ({ history }) => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -55,7 +55,7 @@ const Sidebar = () => {
             <Route path="/users" component={Users} />
             <Route path="/advanced" component={Advanced} />
             <Route path="/support" component={Support} />
-            <Route path="/" component={Logout} exact />
+            {/* <Route path="/logout" component={Logout} exact /> */}
           </main>
         </div>
       </MainDiv>

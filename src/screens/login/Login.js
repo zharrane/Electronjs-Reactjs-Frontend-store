@@ -5,26 +5,35 @@ import * as FaIcons from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  useHistory,
+} from 'react-router-dom';
 import { LoginAction } from '../../actions/userActions';
+import Sidebar from '../../components/sidebar/Sidebar';
 
-const Login = ({ history, location }) => {
+const Login = ({ location }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   try {
     localStorage.removeItem('userInfo');
+    console.log('Item removed');
   } catch (error) {
     console.log(error.message);
   }
   const dispatch = useDispatch();
+  // const redirect = location.search ? location.search.split('=')[1] : '/sidebar';
 
-  const redirect = location.search ? location.search.split('=')[1] : '/sidebar';
   const userLogin = useSelector((state) => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
   useEffect(() => {
     if (userInfo) {
-      history.push(redirect);
+      history.push('/sidebar');
     }
   }, [history, userInfo]);
   const submitHandler = (e) => {
@@ -33,6 +42,7 @@ const Login = ({ history, location }) => {
   };
   return (
     <>
+      {/* {userInfo ? ( */}
       <div className="LoginBody">
         <main className="Login">
           <div className="LoginImg">
@@ -71,6 +81,12 @@ const Login = ({ history, location }) => {
           </div>
         </main>
       </div>
+      {/* ) : (
+        <Router>
+          <Redirect to="/sidebar" />
+          <Route path="/sidebar" component={Sidebar} />
+        </Router>
+      )} */}
     </>
   );
 };

@@ -8,6 +8,11 @@ const Logout = ({ history }) => {
       history.push('/');
     }
   }, [history]);
+  return (
+    <div>
+      <h1>Good Bye</h1>
+    </div>
+  );
 };
 
 export default Logout;
